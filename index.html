@@ -3,162 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio d'Eren Akyurek — étudiant BTS SIO SLAM, développement web et mobile.">
-  <title>Eren Akyurek - Portfolio</title>
-  <link rel="icon" type="image/png" href="img/logo-portfolio.png">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Portfolio multi-pages d'Eren Akyurek, etudiant BTS SIO option SLAM.">
+  <title>Accueil - Portfolio Eren Akyurek</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#accueil">Aller au contenu</a>
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#accueil" aria-label="Accueil">
-        <img src="img/logo-portfolio.png" alt="Logo Eren Akyurek">
+      <a class="brand" href="index.html" aria-label="Retour a l'accueil">
+        <span class="brand-mark">EA</span>
+        <span class="brand-label">Portfolio</span>
       </a>
-      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu">
+        <span class="nav-toggle-lines"></span>
       </button>
+
       <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
         <ul class="nav-list">
-          <li><a href="#accueil" class="nav-link">Accueil</a></li>
-          <li><a href="#competences" class="nav-link">Compétences</a></li>
-          <li><a href="#projets" class="nav-link">Projets</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="nav-item dropdown">
+            <button class="dropdown-toggle" type="button" aria-expanded="false">
+              A propos
+              <span class="dropdown-caret" aria-hidden="true">▾</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="experiences.html">Experiences</a></li>
+              <li><a href="cv.html">CV</a></li>
+              <li><a href="ecole.html">Ecole</a></li>
+              <li><a href="entreprise.html">Entreprise</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="activite-pro.html">Activite professionnelle</a></li>
+          <li class="nav-item"><a class="nav-link" href="epreuve-e6.html">Epreuve E6</a></li>
+          <li class="nav-item"><a class="nav-link" href="veille.html">Veille technologique</a></li>
+          <li class="nav-item dropdown">
+            <button class="dropdown-toggle" type="button" aria-expanded="false">
+              Competences
+              <span class="dropdown-caret" aria-hidden="true">▾</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="technos.html">Technos</a></li>
+              <li><a href="tableau-excel.html">Tableau Excel</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section id="accueil" class="section hero" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div class="hero-content reveal">
-          <p class="hero-kicker">BTS SIO · option SLAM</p>
-          <h1 id="hero-title" class="hero-title">Eren Akyurek</h1>
-          <p class="hero-lead">
-            Étudiant en développement web et mobile.
-          </p>
-          <p class="hero-lead">
-            Je conçois des interfaces propres, responsives et faciles à utiliser.
-          </p>
-          <p class="hero-lead">
-            Curieux et impliqué, je souhaite apprendre et progresser en continu.
-            
-          </p>
-          <div class="hero-actions">
-            <a href="#projets" class="btn btn-primary">Voir mes projets</a>
-            <a href="#contact" class="btn btn-ghost">Me contacter</a>
+  <main id="contenu" class="page-main">
+    <section class="hero-section">
+      <div class="container hero-layout hero-layout-minimal">
+        <div>
+          <h1 class="hero-name">
+            <span>AKYUREK</span>
+            <span>Eren</span>
+          </h1>
+          <div class="hero-text-minimal">
+            <p>Salut, je m'appelle Eren !</p>
+            <p>Actuellement etudiant en 2eme annee de BTS SIO option SLAM (Solutions Logicielles et Applications Metiers) a l'AFIP, j'ai choisi de me specialiser dans le developpement d'applications.</p>
+            <p>Mon parcours est un peu particulier : je viens d'un Bac General. Bien que l'informatique m'ait toujours attire, notamment grace a l'influence de ma famille qui baigne dans ce milieu, j'ai decide de sauter le pas et de partir de zero.</p>
+            <p>Mon objectif etait clair : me challenger, apprendre vite et construire des bases solides dans un domaine qui me passionne. Ce choix m'a permis de developper une grande curiosite et une reelle envie de progresser chaque jour dans la creation de solutions numeriques. Aujourd'hui, je m'epanouis dans la conception de logiciels et le code, et je suis impatient de mettre ces competences au service de projets concrets !</p>
           </div>
         </div>
-        <figure class="hero-photo reveal">
-          <img src="img/pdp-portfolio.png" alt="Photo de profil d'Eren Akyurek">
+        <figure class="hero-photo-frame">
+          <img src="img/pdp-portfolio.png" alt="Photo de profil de Eren Akyurek">
         </figure>
-      </div>
-    </section>
-
-    <section id="competences" class="section section-alt" aria-labelledby="competences-title">
-      <div class="container">
-        <header class="section-header reveal">
-          <h2 id="competences-title">Compétences</h2>
-          <p class="section-intro">Technologies utilisées en formation et en projets.</p>
-        </header>
-        <div class="skills-grid">
-          <article class="skill-card reveal">
-            <h3>Front-end</h3>
-            <ul class="skill-list">
-              <li>HTML5 / CSS3</li>
-              <li>JavaScript (vanilla)</li>
-              <li>Responsive design</li>
-            </ul>
-          </article>
-          <article class="skill-card reveal">
-            <h3>Back-end</h3>
-            <ul class="skill-list">
-              <li>PHP</li>
-              <li>Python</li>
-              <li>API REST</li>
-            </ul>
-          </article>
-          <article class="skill-card reveal">
-            <h3>Base de données & outils</h3>
-            <ul class="skill-list">
-              <li>MySQL / MariaDB</li>
-              <li>SQL</li>
-              <li>Git / GitHub</li>
-              <li>Cursor IDE</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="projets" class="section" aria-labelledby="projets-title">
-      <div class="container">
-        <header class="section-header reveal">
-          <h2 id="projets-title">Projets</h2>
-          <p class="section-intro">Deux projets principaux réalisés dans mon parcours.</p>
-        </header>
-        <div class="projects-grid projects-grid-two">
-          <article class="project-card reveal">
-            <h3>TimeTracker GSB</h3>
-            <p class="project-meta">Web · PHP · MySQL</p>
-            <p>Application intranet de gestion du temps et des absences avec workflow de validation.</p>
-          </article>
-          <article class="project-card reveal">
-            <h3>StockTracker GSB</h3>
-            <p class="project-meta">Mobile · Flutter · FastAPI</p>
-            <p>Application mobile de suivi des stocks et tickets, connectée à une API REST.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section section-alt" aria-labelledby="contact-title">
-      <div class="container">
-        <header class="section-header reveal">
-          <h2 id="contact-title">Contact</h2>
-          <p class="section-intro">Mail direct et téléchargement du fichier Excel.</p>
-        </header>
-        <div class="contact-stack reveal">
-          <a href="mailto:eren.akyurek@outlook.com" class="btn btn-primary contact-mailto-btn">eren.akyurek@outlook.com</a>
-          <a href="mon-fichier.xlsx" class="btn btn-download" download="mon-fichier.xlsx">
-            <span class="btn-download-icon" aria-hidden="true">⬇</span>
-            Télécharger mon-fichier.xlsx
-          </a>
-        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <p class="footer-copy">© <span id="year"></span> Eren Akyurek — Portfolio BTS SIO SLAM.</p>
-      </div>
-      <div>
-        <h3 class="footer-title">Navigation</h3>
+    <div class="container footer-layout">
+      <section class="footer-block">
+        <h2 class="footer-title">Portfolio</h2>
+        <p class="footer-copy">© <span id="current-year"></span> Eren Akyurek.</p>
+      </section>
+      <section class="footer-block">
+        <h2 class="footer-title">Pages utiles</h2>
         <ul class="footer-links">
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#competences">Compétences</a></li>
-          <li><a href="#projets">Projets</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="experiences.html">Experiences</a></li>
+          <li><a href="veille.html">Veille technologique</a></li>
         </ul>
-      </div>
-      <div>
-        <h3 class="footer-title">Liens</h3>
+      </section>
+      <section class="footer-block">
+        <h2 class="footer-title">Liens</h2>
         <ul class="footer-links">
-          <li><a href="https://github.com/Eren-Akyurek" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/eren-akyurek-67b315329/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="mailto:eren.akyurek@outlook.com">eren.akyurek@outlook.com</a></li>
+          <li><a href="https://github.com/Eren-Akyurek" target="_blank" rel="noopener noreferrer">Profil GitHub</a></li>
+          <li><a href="tableau-excel.html">Tableau de competences</a></li>
         </ul>
-      </div>
-      <a href="#accueil" class="footer-top-arrow" aria-label="Retour en haut">↑</a>
+      </section>
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>
