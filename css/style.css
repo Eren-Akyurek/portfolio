@@ -270,6 +270,33 @@ a {
 }
 
 @media (min-width: 769px) {
+  /* Chevron toujours visible sans barres de defilement dans la nav */
+  .site-nav {
+    flex: 1;
+    justify-content: flex-end;
+    overflow: visible;
+  }
+
+  .nav-list {
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-item.dropdown {
+    flex-shrink: 0;
+  }
+
+  .dropdown-toggle {
+    white-space: nowrap;
+  }
+
+  .dropdown-toggle .dropdown-caret {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+  }
+
   .nav-item.dropdown:hover > .dropdown-menu,
   .nav-item.dropdown:focus-within > .dropdown-menu,
   .nav-item.dropdown.is-open > .dropdown-menu {
@@ -364,6 +391,67 @@ a {
 .timeline-item h3,
 .footer-block h3 {
   margin-top: 0;
+}
+
+.card h3.competence-heading {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* Carte competences (Limseo / LabWare) : blocs lisibles et listes a puces visibles */
+.card.competence-card .competence-block {
+  padding: 1.15rem 1.3rem;
+  border-radius: var(--radius-md);
+  background: rgba(99, 179, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.card.competence-card .competence-block + .competence-block {
+  margin-top: 1.35rem;
+}
+
+.card.competence-card .competence-heading {
+  margin: 0 0 0.65rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: clamp(1.08rem, 1.8vw, 1.28rem);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.35;
+}
+
+.card.competence-card ul.bullet-list.competence-points {
+  display: block;
+  margin: 0;
+  padding: 0.25rem 0 0 1.4rem;
+  list-style: disc;
+  list-style-position: outside;
+}
+
+.card.competence-card ul.bullet-list.competence-points li {
+  margin: 0.85rem 0 0;
+  padding-left: 0.4rem;
+  color: var(--color-text-soft);
+  line-height: 1.62;
+}
+
+.card.competence-card ul.bullet-list.competence-points li:first-child {
+  margin-top: 0;
+}
+
+.card.competence-card ul.bullet-list.competence-points li strong {
+  color: var(--color-text);
+}
+
+.card.competence-card ul.bullet-list.competence-points li::marker {
+  color: var(--color-primary-strong);
+}
+
+.section-experience-lead.experience-follow {
+  margin-top: 1rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--color-border);
 }
 
 .hero-name {
