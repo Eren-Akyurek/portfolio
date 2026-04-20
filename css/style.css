@@ -527,6 +527,12 @@ a {
   gap: 1.25rem;
 }
 
+@media (min-width: 901px) {
+  .technos-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 .two-columns {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
