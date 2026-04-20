@@ -7,6 +7,34 @@
   var currentYear = document.getElementById("current-year");
   var isMobile = window.matchMedia("(max-width: 768px)");
 
+  function ensurePortfolioFormationLink() {
+    var formationMenu = Array.prototype.slice
+      .call(document.querySelectorAll(".nav-item.dropdown"))
+      .map(function (item) {
+        var toggle = item.querySelector(".dropdown-toggle");
+        return toggle && toggle.textContent.trim().indexOf("Formation") === 0 ? item : null;
+      })
+      .filter(Boolean)[0];
+
+    if (!formationMenu) {
+      return;
+    }
+
+    var menuList = formationMenu.querySelector(".dropdown-menu");
+    if (!menuList || menuList.querySelector('a[href="portfolio-projet.html"]')) {
+      return;
+    }
+
+    var item = document.createElement("li");
+    var link = document.createElement("a");
+    link.href = "portfolio-projet.html";
+    link.textContent = "Portfolio";
+    item.appendChild(link);
+    menuList.appendChild(item);
+  }
+
+  ensurePortfolioFormationLink();
+
   if (currentYear) {
     currentYear.textContent = String(new Date().getFullYear());
   }
